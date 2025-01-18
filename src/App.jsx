@@ -1,21 +1,22 @@
-import React from "react";
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import CoffeeMenu from "./components/CoffeeMenu";
-import CoffeeRecipeDetails from "./components/CoffeeRecipeDetails";
+
 
 function App() {
   return (
     <Router>
-      <div className="font-sans">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/menu" element={<CoffeeMenu />} />
-          <Route path="/recipe/:id" element={<CoffeeRecipeDetails />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer/>
     </Router>
   );
 }
