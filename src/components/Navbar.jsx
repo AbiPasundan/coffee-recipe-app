@@ -11,21 +11,22 @@ export default function Navbar() {
   };
 
   return (
-    <div className="navbar bg-coffee-100 shadow-md dark:bg-darkCoffee-800">
+    <div className=" navbar bg-coffee-100 shadow-md dark:bg-darkCoffee-800">
       <div className="navbar-start">
         <a className="btn btn-ghost normal-case text-xl text-coffee-800 dark:text-coffee-50" href="/">
           Recipe Coffee
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden text-2xl lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link to="/" className="dark:text-coffee-50">Home</Link></li>
           <li><Link to="/menu" className="dark:text-coffee-50">Menu</Link></li>
+          <li><Link to="/learn" className="dark:text-coffee-50">Learn</Link></li>
           <li><Link to="/about" className="dark:text-coffee-50">About</Link></li>
           <li><Link to="/contact" className="dark:text-coffee-50">Contact</Link></li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end text-2xl">
         <a className="btn btn-primary" href="#get-started">
           Get Started
         </a>
@@ -52,6 +53,7 @@ export default function Navbar() {
           >
             <li><Link to="/" className="dark:text-coffee-50">Home</Link></li>
             <li><Link to="/menu" className="dark:text-coffee-50">Menu</Link></li>
+            <li><Link to="/learn" className="dark:text-coffee-50">Learn</Link></li>
             <li><Link to="/about" className="dark:text-coffee-50">About</Link></li>
             <li><Link to="/contact" className="dark:text-coffee-50">Contact</Link></li>
           </ul>

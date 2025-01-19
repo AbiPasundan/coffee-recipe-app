@@ -29,6 +29,10 @@ module.exports = {
           900: '#8c8c8c',
         },
       },
+      backgroundImage: {
+        'hero-pattern': "url('https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
     },
   },
   plugins: [require('daisyui')],
