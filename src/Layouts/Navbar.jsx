@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../components/button/Button';
+import NavLink from '../components/link/NavLink';
 
 export default function Navbar() {
   const [theme, setTheme] = useState('light');
@@ -19,17 +21,14 @@ export default function Navbar() {
       </div>
       <div className="navbar-center hidden text-2xl lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><Link to="/" className="dark:text-coffee-50">Home</Link></li>
-          <li><Link to="/menu" className="dark:text-coffee-50">Menu</Link></li>
-          <li><Link to="/learn" className="dark:text-coffee-50">Learn</Link></li>
-          <li><Link to="/about" className="dark:text-coffee-50">About</Link></li>
-          <li><Link to="/contact" className="dark:text-coffee-50">Contact</Link></li>
+          <NavLink link="/" text="Home" />
+          <NavLink link="/Recipe" text="Recipe" />
+          <NavLink link="/Learn" text="Learn" />
+          <NavLink link="/About" text="About" />
+          <NavLink link="/contact" text="Contact" />
         </ul>
       </div>
       <div className="navbar-end text-2xl">
-        <a className="btn btn-primary" href="#get-started">
-          Get Started
-        </a>
         <div className="dropdown dropdown-end lg:hidden">
           <label tabIndex="0" className="btn btn-ghost btn-circle">
             <svg

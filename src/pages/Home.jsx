@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel";
+import Carousel from "../components/Carousel";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -33,55 +33,6 @@ export default function Home() {
         <a href="#menu" className="btn btn-primary">
           Explore Menu
         </a>
-      </div>
-    </div>
-  </section>
-  {/* Konten Utama */}
-  <section id="menu" className="py-12">
-    <div className="container mx-auto px-6">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Our Featured Recipes
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Card 1 */}
-        <div className="card bg-white shadow-lg">
-          <figure>
-            <img
-              src="https://source.unsplash.com/400x300?coffee,latte"
-              alt="Latte"
-            />
-          </figure>
-          <div className="card-body">
-            <h3 className="card-title text-lg font-bold">Latte</h3>
-            <p>A creamy and smooth coffee experience for everyone.</p>
-          </div>
-        </div>
-        {/* Card 2 */}
-        <div className="card bg-white shadow-lg">
-          <figure>
-            <img
-              src="https://source.unsplash.com/400x300/?coffee,cappuccino"
-              alt="Cappuccino"
-            />
-          </figure>
-          <div className="card-body">
-            <h3 className="card-title text-lg font-bold">Cappuccino</h3>
-            <p>Perfect balance of espresso, steamed milk, and foam.</p>
-          </div>
-        </div>
-        {/* Card 3 */}
-        <div className="card bg-white shadow-lg">
-          <figure>
-            <img
-              src="https://source.unsplash.com/400x300/?coffee,espresso"
-              alt="Espresso"
-            />
-          </figure>
-          <div className="card-body">
-            <h3 className="card-title text-lg font-bold">Espresso</h3>
-            <p>Rich, bold, and full-bodied coffee for enthusiasts.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
