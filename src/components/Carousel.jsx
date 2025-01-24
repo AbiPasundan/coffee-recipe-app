@@ -67,12 +67,12 @@ export default function Carousel() {
     };
 
     return (
-        <section id="menu" className="py-12">
+        <section id="menu" className="py-12 bg-coffee-100 shadow-md dark:bg-darkCoffee-800 text-coffee-800 dark:text-coffee-50">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center mb-8">
                     Our Featured Recipes
                 </h2>
-                <div className="relative">
+                <div className="relative ">
                     {/* Wrapper untuk Carousel */}
                     <div
                         ref={carouselRef}
@@ -86,6 +86,18 @@ export default function Carousel() {
                             // alt={title}
                             title={"Cappuchino"}
                             description={"This is description"}
+                        />
+                        <Card
+                            img={"https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=400"}
+                            // alt={title}
+                            title={"Late"}
+                            description={"This is description This is description This is description This is description"}
+                        />
+                        <Card
+                            img={"https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=400"}
+                            // alt={title}
+                            title={"V60"}
+                            description={"Manual brew lorem15"}
                         />
                     </div>
 

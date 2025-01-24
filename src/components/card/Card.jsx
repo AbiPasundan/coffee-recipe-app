@@ -2,7 +2,7 @@
 
 export default function Card({img, title, description}) {
     return (
-        <div className="card bg-white shadow-lg w-full flex-shrink-0 snap-start">
+        <div className="card shadow-lg w-full flex-shrink-0 snap-start ">
             <figure>
                 <img
                     src={img}
