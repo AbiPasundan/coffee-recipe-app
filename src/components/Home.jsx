@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Carousel from "./Carousel";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -11,60 +12,124 @@ export default function Home() {
 
   return (
     <>
-      <div
-          style={{
-            backgroundImage: "url(frenchpress.jpg)",
-          }}
-        className="hero bg-coffee-100 dark:bg-darkCoffee-800 min-h-screen">
-        <div className="hero-content flex-col justify-stretch lg:flex-row-reverse">
-          <div>
-            <h1 className="text-5xl text-coffee-800 font-bold dark:text-coffee-50">Box Office News!</h1>
-            <p className="py-6 max-w-[80%]">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
+<>
+  {/* Hero Section */}
+  <section
+    id="home"
+    className="relative bg-cover bg-center h-screen"
+    style={{
+      backgroundImage: 'url("https://source.unsplash.com/1600x900/?coffee")'
+    }}
+  >
+    <div className="bg-black bg-opacity-50 h-full flex items-center">
+      <div className="container mx-auto px-6 text-left">
+        <h1 className="text-4xl md:text-6xl text-white font-bold leading-tight mb-4">
+          Welcome to Our Coffee World
+        </h1>
+        <p className="text-lg text-gray-200 mb-6">
+          Discover the best coffee recipes, brewing techniques, and tools to
+          enjoy the perfect cup.
+        </p>
+        <a href="#menu" className="btn btn-primary">
+          Explore Menu
+        </a>
+      </div>
+    </div>
+  </section>
+  {/* Konten Utama */}
+  <section id="menu" className="py-12">
+    <div className="container mx-auto px-6">
+      <h2 className="text-3xl font-bold text-center mb-8">
+        Our Featured Recipes
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Card 1 */}
+        <div className="card bg-white shadow-lg">
+          <figure>
+            <img
+              src="https://source.unsplash.com/400x300?coffee,latte"
+              alt="Latte"
+            />
+          </figure>
+          <div className="card-body">
+            <h3 className="card-title text-lg font-bold">Latte</h3>
+            <p>A creamy and smooth coffee experience for everyone.</p>
+          </div>
+        </div>
+        {/* Card 2 */}
+        <div className="card bg-white shadow-lg">
+          <figure>
+            <img
+              src="https://source.unsplash.com/400x300/?coffee,cappuccino"
+              alt="Cappuccino"
+            />
+          </figure>
+          <div className="card-body">
+            <h3 className="card-title text-lg font-bold">Cappuccino</h3>
+            <p>Perfect balance of espresso, steamed milk, and foam.</p>
+          </div>
+        </div>
+        {/* Card 3 */}
+        <div className="card bg-white shadow-lg">
+          <figure>
+            <img
+              src="https://source.unsplash.com/400x300/?coffee,espresso"
+              alt="Espresso"
+            />
+          </figure>
+          <div className="card-body">
+            <h3 className="card-title text-lg font-bold">Espresso</h3>
+            <p>Rich, bold, and full-bodied coffee for enthusiasts.</p>
           </div>
         </div>
       </div>
-
-
-      <div className="min-h-screen bg-coffee-100 text-coffee-800 dark:bg-darkCoffee-800 dark:text-coffee-50">
-        {/* Main Content Section */}
-        <main className="container mx-auto py-10 px-4">
-          <section className="text-center mb-10">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              Explore Our Coffee Recipes
-            </h2>
-            <p className="text-lg">
-              Discover delicious coffee recipes that you can easily make at home.
-              Start your coffee journey today!
-            </p>
-          </section>
-
-          {/* Features Section */}
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="card bg-coffee-50 dark:bg-darkCoffee-700 shadow-xl">
-              <div className="card-body">
-                <h3 className="card-title">Espresso</h3>
-                <p>A strong and bold coffee for those who need a quick boost!</p>
-              </div>
-            </div>
-            <div className="card bg-coffee-50 dark:bg-darkCoffee-700 shadow-xl">
-              <div className="card-body">
-                <h3 className="card-title">Cappuccino</h3>
-                <p>Perfectly balanced coffee with creamy foam on top.</p>
-              </div>
-            </div>
-            <div className="card bg-coffee-50 dark:bg-darkCoffee-700 shadow-xl">
-              <div className="card-body">
-                <h3 className="card-title">Latte</h3>
-                <p>A smooth and creamy coffee for a relaxing day.</p>
-              </div>
-            </div>
-          </section>
-        </main>
+    </div>
+  </section>
+  {/* Tentang Kami */}
+  <section id="about" className="py-12 bg-gray-200">
+    <div className="container mx-auto px-6">
+      <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+      <p className="text-center text-gray-700 max-w-2xl mx-auto">
+        We are passionate about coffee and committed to bringing you the finest
+        recipes and tools to enhance your coffee experience. From beginners to
+        experts, our platform is here to inspire your love for coffee.
+      </p>
+      <div className="flex justify-center mt-6">
+        <a href="#contact" className="btn btn-outline">
+          Get in Touch
+        </a>
       </div>
+    </div>
+  </section>
+
+  <Carousel/>
+
+  <div className="flex flex-col md:flex-row items-center justify-center w-full h-screen bg-gray-100">
+      {/* Bagian Kiri (Gambar) */}
+      <div className="w-full md:w-1/2 h-1/2 md:h-full">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=800"
+          alt="Coffee"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Bagian Kanan (Konten) */}
+      <div className="w-full md:w-1/2 h-full flex flex-col items-start justify-center px-8 md:px-16 bg-white text-gray-800">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Discover the Best Coffee
+        </h1>
+        <p className="text-lg md:text-xl mb-6">
+          Indulge in our carefully crafted coffee recipes, perfect for every
+          occasion. Taste the richness, aroma, and passion in every cup.
+        </p>
+        <button className="btn btn-primary px-6 py-3">Learn More</button>
+      </div>
+    </div>
+
+  
+</>
+
 
 
     </>
