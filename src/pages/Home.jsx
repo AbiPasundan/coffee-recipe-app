@@ -8,7 +8,16 @@ export default function Home() {
     <>
       <Hero />
       {/* Tentang Kami */}
-      <AboutLayout />
+      <AboutLayout 
+            title="Welcome to Recipe Coffee" 
+            descriptions={[
+                "At Recipe Coffee, we are passionate about sharing the joy of coffee with the world.",
+                "Our mission is to inspire coffee lovers to explore, create, and enjoy unique recipes.",
+            ]}
+            showButton={true} 
+            buttonText="See More" 
+            buttonLink="./about" 
+        />
 
       <Carousel />
 
