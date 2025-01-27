@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutLayout from '../Layouts/about/AboutLayout';
-import Card from '../components/card/Card';
 import ListSideCard from '../components/listsidecard/ListSideCard';
 
 export default function About() {
@@ -8,21 +7,23 @@ export default function About() {
     <div className="bg-coffee-50 dark:bg-darkCoffee-900 text-coffee-800 dark:text-coffee-50 min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <AboutLayout
-          title="About Us"
+          about="About Us"
+          title="Our Coffee Journey"
           descriptions={[
-            "Recipe Coffee was created to bring coffee enthusiasts together.",
-            "Whether you're a beginner or a pro, our resources cater to all levels.",
+            "We are passionate about bringing the best coffee experience to you.",
+            "Every cup is brewed with love and precision to deliver exceptional taste."
           ]}
-          showButton={false}
+          showButton={true}
+          buttonText="Learn More"
+          buttonLink="/about"
+          imageSrc="./img/manualbrew/landscape/v60_3l.jpg"
+          imageAlt="A beautiful cup of coffee"
+          w={500}
+          reverse={true}
         />
 
-        <Card
-          title={"Cappuchino"}
-          description={"This is description"}
-          ShowImg={false}
-        />
 
-        <ListSideCard/>
+        <ListSideCard />
       </div>
     </div>
   );

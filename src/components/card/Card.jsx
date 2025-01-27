@@ -1,11 +1,13 @@
 
 
-export default function Card({img, ShowImg = true, title, description}) {
+export default function Card({img, w, h, ShowImg = true, title, description}) {
     return (
         <div className="card shadow-lg w-full flex-shrink-0 snap-start ">
             <figure>
                 {ShowImg && <img
                     src={img}
+                    width={w}
+                    height={h}
                     alt={title}
                 />}
             </figure>

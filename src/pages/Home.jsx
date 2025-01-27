@@ -8,41 +8,35 @@ export default function Home() {
     <>
       <Hero />
       {/* Tentang Kami */}
-      <AboutLayout 
-            title="Welcome to Recipe Coffee" 
-            descriptions={[
-                "At Recipe Coffee, we are passionate about sharing the joy of coffee with the world.",
-                "Our mission is to inspire coffee lovers to explore, create, and enjoy unique recipes.",
-            ]}
-            showButton={true} 
-            buttonText="See More" 
-            buttonLink="./about" 
-        />
+      <AboutLayout
+        about="About"
+        title="Our Coffee Journey"
+        descriptions={[
+          "We are passionate about bringing the best coffee experience to you.",
+          "Every cup is brewed with love and precision to deliver exceptional taste."
+        ]}
+        showButton={true}
+        buttonText="Learn More"
+        buttonLink="/about"
+        imageSrc="./img/manualbrew/landscape/v60_4l.jpg"
+        imageAlt="A beautiful cup of coffee"
+        w={500}
+        reverse={true}
+      />
 
       <Carousel />
 
 
-      <div className="flex flex-col md:flex-row items-center justify-center w-full h-screen bg-gray-100">
-        {/* Bagian Kiri (Gambar) */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full">
+      <div className="diff aspect-[16/9]">
+        <div className="diff-item-1">
+          <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+        </div>
+        <div className="diff-item-2">
           <img
-            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=800"
-            alt="Coffee"
-            className="w-full h-full object-cover"
-          />
+            alt="daisy"
+            src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
         </div>
-
-        {/* Bagian Kanan (Konten) */}
-        <div className="w-full md:w-1/2 h-full flex flex-col items-start justify-center px-8 md:px-16 bg-white text-gray-800">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Discover the Best Coffee
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Indulge in our carefully crafted coffee recipes, perfect for every
-            occasion. Taste the richness, aroma, and passion in every cup.
-          </p>
-          <button className="btn btn-primary px-6 py-3">Learn More</button>
-        </div>
+        <div className="diff-resizer"></div>
       </div>
     </>
   );

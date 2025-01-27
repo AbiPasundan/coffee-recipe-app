@@ -82,19 +82,22 @@ export default function Carousel() {
                         onTouchEnd={handleTouchEnd}
                     >
                         <Card
-                            img={"https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=400"}
+                            img={"./img/manualbrew/potret/v60_1.jpg"}
+                            w={300}
                             // alt={title}
-                            title={"Cappuchino"}
+                            title={"V60"}
                             description={"This is description"}
                         />
                         <Card
-                            img={"https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=400"}
+                            img={"./img/espressobase/potret/espresso_1.jpg"}
+                            w={300}
                             // alt={title}
                             title={"Late"}
                             description={"This is description This is description This is description This is description"}
                         />
                         <Card
-                            img={"https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZmZlZXxlbnwwfHx8fDE2NzM1MjgyMDQ&ixlib=rb-4.0.3&q=80&w=400"}
+                            img={"./img/espressobase/potret/latteart_1.jpg"}
+                            w={300}
                             // alt={title}
                             title={"V60"}
                             description={"Manual brew lorem15"}
