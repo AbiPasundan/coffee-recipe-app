@@ -1,4 +1,5 @@
 import Carousel from "../components/Carousel";
+import Diff from "../components/diff/Diff";
 import Hero from "../components/hero/Hero";
 import AboutLayout from "../Layouts/about/AboutLayout";
 
@@ -18,26 +19,18 @@ export default function Home() {
         showButton={true}
         buttonText="Learn More"
         buttonLink="/about"
-        imageSrc="./img/manualbrew/landscape/v60_4l.jpg"
+        imageSrc="./img/manualbrew/landscape/v60_4l.webp"
         imageAlt="A beautiful cup of coffee"
         w={500}
         reverse={true}
       />
 
-      <Carousel />
+      <Carousel title="Find The Beast Coffee Recipe"/>
 
+      <Diff
+        img1={"./img/manualbrew/landscape/v60_4l.webp"}
+        img2={"./img/manualbrew/landscape/v60_1l.webp"} />
 
-      <div className="diff aspect-[16/9]">
-        <div className="diff-item-1">
-          <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
-        </div>
-        <div className="diff-item-2">
-          <img
-            alt="daisy"
-            src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" />
-        </div>
-        <div className="diff-resizer"></div>
-      </div>
     </>
   );
 }

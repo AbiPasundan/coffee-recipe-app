@@ -9,6 +9,7 @@ export default function Card({img, w, h, ShowImg = true, title, description}) {
                     width={w}
                     height={h}
                     alt={title}
+                    loading="lazy"
                 />}
             </figure>
             <div className="card-body">

@@ -69,7 +69,7 @@ export default function AboutLayout({
     reverse = true,
 }) {
     return (
-        <div className="w-full min-h-screen px-4 py-12 bg-coffee-100 shadow-md dark:bg-darkCoffee-800 text-coffee-800 dark:text-coffee-50">
+        <div className="w-full px-4 py-12 bg-coffee-100 shadow-md dark:bg-darkCoffee-800 text-coffee-800 dark:text-coffee-50">
             <h1 className="text-4xl font-bold text-center mb-8">{about}</h1>
             <Layout
                 title={title}

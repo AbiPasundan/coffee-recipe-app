@@ -16,7 +16,7 @@ export default function About() {
           showButton={true}
           buttonText="Learn More"
           buttonLink="/about"
-          imageSrc="./img/manualbrew/landscape/v60_3l.jpg"
+          imageSrc="./img/manualbrew/landscape/v60_3l.webp"
           imageAlt="A beautiful cup of coffee"
           w={500}
           reverse={true}
