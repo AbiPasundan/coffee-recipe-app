@@ -12,14 +12,16 @@ export default function Navbar() {
   };
 
   return (
-    <div className=" navbar bg-coffee-100 shadow-md dark:bg-darkCoffee-800">
+    <div className="navbar bg-coffee-100 shadow-md dark:bg-darkCoffee-800">
       <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl text-coffee-800 dark:text-coffee-50" href="/">
+        <Link to="/" className="btn btn-ghost normal-case text-xl text-coffee-800 dark:text-coffee-50">
           Recipe Coffee
-        </a>
+        </Link>
       </div>
-      <div className="navbar-center hidden text-2xl lg:flex">
-        <ul className="menu menu-horizontal px-1">
+
+      {/* Navbar menu untuk layar besar */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 text-md">
           <NavLink link="/" text="Home" />
           <NavLink link="/Recipe" text="Recipe" />
           <NavLink link="/Learn" text="Learn" />
@@ -27,12 +29,14 @@ export default function Navbar() {
           <NavLink link="/contact" text="Contact" />
         </ul>
       </div>
+
       <div className="navbar-end text-2xl">
+        {/* Dropdown Menu untuk Mobile */}
         <div className="dropdown dropdown-end lg:hidden">
-          <label tabIndex="0" className="btn btn-ghost btn-circle">
+          <button tabIndex="0" className="btn btn-ghost btn-circle" data-toggle="dropdown">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -44,18 +48,22 @@ export default function Navbar() {
                 d="M4 6h16M4 12h16m-7 6h7"
               />
             </svg>
-          </label>
+          </button>
+
+          {/* Menambahkan 'z-50' agar menu selalu terlihat */}
           <ul
             tabIndex="0"
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-coffee-50 dark:bg-darkCoffee-700 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-coffee-50 dark:bg-darkCoffee-700 rounded-box w-52 z-50"
           >
             <li><Link to="/" className="dark:text-coffee-50">Home</Link></li>
-            <li><Link to="/menu" className="dark:text-coffee-50">Menu</Link></li>
-            <li><Link to="/learn" className="dark:text-coffee-50">Learn</Link></li>
-            <li><Link to="/about" className="dark:text-coffee-50">About</Link></li>
+            <li><Link to="/Recipe" className="dark:text-coffee-50">Recipe</Link></li>
+            <li><Link to="/Learn" className="dark:text-coffee-50">Learn</Link></li>
+            <li><Link to="/About" className="dark:text-coffee-50">About</Link></li>
             <li><Link to="/contact" className="dark:text-coffee-50">Contact</Link></li>
           </ul>
         </div>
+
+        {/* Tombol untuk mengubah tema */}
         <button
           onClick={toggleTheme}
           className="ml-4 btn btn-ghost btn-circle"
@@ -63,7 +71,7 @@ export default function Navbar() {
           {theme === 'light' ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -78,7 +86,7 @@ export default function Navbar() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
